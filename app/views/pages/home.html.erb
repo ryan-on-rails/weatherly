@@ -1,0 +1,18 @@
+<section class="section">
+  <p class="subtitle">
+    Please enter your address to search for the weather:
+  </p>
+  <%= form_with url: search_path, local: true do |form| %>
+    <div class="field">
+      <label class="label"><%= form.label :address %></label>
+      <div class="control">
+        <%= form.text_field :address, class: "input", placeholder: "123 Easy Street, Pittsburgh PA 15022" %>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <%= form.submit "Search", class: "button is-link" %>
+      </div>
+    </div>
+  <% end %>
+</section>
